@@ -1,0 +1,377 @@
+/* Quick guide to remember Sass syntax and not mix with SCSS: 
+
+    1. No curly braces or semicolons are used.
+    2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
+  
+    */
+    
+$primaryColor: #0029FF
+
+
+#gridContainer 
+    font-family: 'Roboto', sans-serif
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto auto auto
+    grid-template-areas: "header" "main" "footer" //<<<- New syntax in SASS. 
+    font-size: 1em
+    
+a 
+    text-decoration: none //Eliminates all the underlined links from text being a link in general,
+    //But, I am setting underline value for this in other parts when hovered. 
+
+
+header
+    grid-area: header
+    display: flex
+    justify-content: space-between
+    section
+        display: flex
+        align-items: center    
+    h1  
+        a 
+            display: inline-block //Hover/Transform not working without inline-block display
+            // a tag is by default an inline element - transform needs block level element to function.
+            // (StackOverflow - ) 
+            color: $primaryColor
+            transition: transform 0.3s ease
+
+            &:hover
+                 color: darken($primaryColor, 20%)
+                 transform: scale(1.15)
+                 
+                
+    .topNavIcons, .headerIcon
+        text-decoration: none
+        color: black
+        margin: 3px
+
+    
+    .topNavIcons
+        font-size: 1.5em
+       
+    .headerIcon
+        i
+            transition: transform 0.3s ease
+
+        &:hover
+            i
+                transform: scale(1.25)
+    
+#desktopNav
+    display: none
+
+#shippingInfo
+    text-align: center
+    background-color: #D9D9D9
+    border-radius: 10px
+    padding: 1px
+
+     
+main 
+    grid-area: main
+    flex: 1
+    padding: 5px
+    padding-bottom: 80px
+    // Shorthand for flex-grow/shrink/basis
+    // Grow: a flex item can grow if necessary. Val 1 means it can grow to fill available space.
+    // Shrink: flex item can shrink. If lack of space in container, item can shrink. 
+    // Basis: auto value means default size will be based on content size. *(css-tricks.com - awesome page!)
+
+    #productLogos
+        display: flex
+        margin: 10px 0
+        justify-content: space-between
+
+        img
+            max-height: 100px //scaling the images to be same height
+        
+        div
+            flex: 1
+            box-sizing: border-box
+            text-align: center
+            padding: 10px
+            border: 1px solid black
+            border-radius: 7px
+            margin: 10px
+            
+            
+            a:first-child //The above div has 2 a-tags (children). First-child makes sure that the set
+                // properties apply only to the first child. 
+                color: black
+                display: block
+
+            h2
+                transition: transform 0.3s ease
+                
+
+                &:hover
+                    transform: scale(1.15)
+                    text-decoration: underline
+
+
+    #product-page-banner
+        background-color: #d4d2d2
+        border-radius: 8px
+        margin: 10px
+  
+
+        #breadcrumb-nav
+            color: grey
+            padding: 3px 5px 0px 0px
+            font-size: 0.9em
+            margin: 0
+           
+
+            li
+                display: inline
+                
+                a
+                    text-decoration: underline
+                    color: grey
+                    display: inline-block
+                    transition: transform 0.3s ease
+                    &:hover
+                        transform: scale(1.1)
+               
+
+        #search-result-info
+            color: black
+            display: block
+            margin: 10px
+
+            h1
+                font-size: 1.25em
+                margin: 0
+
+        #brands
+
+            ul
+                color: grey
+                font-weight: lighter
+
+                li:nth-child(n+2)
+                    a
+                        color: black
+                        text-decoration: underline
+                        padding: 2px
+                        font-weight: bold
+                
+            li
+                display: inline
+        
+        aside
+            text-align: right
+            font-size: 0.9em
+    
+    .product-grid //Remember!: task requires mobile to have only one column!
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        article
+            width: 50%
+            
+     
+        figure
+            position: relative // Sets style position to relative. Doesnt move item
+            // itself, but makes it possible to place absolutely positioned child
+                //elements of the property.
+            padding: 10px
+
+            img
+                display: block
+                width: 100%
+                height: auto
+                // border: 1px solid black
+
+            .product-item-label
+                position: absolute
+                top: 10px
+                right: 10px
+                background-color: black
+                color: white
+                text-decoration: underline
+                padding: 2px 
+                font-size: 0.9em
+                z-index: 1 // Ensures the label stays in front of other elements!
+
+.help-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 0.8em
+
+    .seeMoreButton
+        padding: 5px
+        font-size: 0.9em
+        margin-top: 16px
+
+.link-box-wrapper
+    display: flex
+    justify-content: space-evenly
+    margin-bottom: 25px
+
+    a
+        font-size: 0.8em
+        border: 2px solid black
+        border-radius: 8px
+        text-align: center
+        padding: 5px
+        width: 33%
+        margin: 5px
+        color: black
+        transition: transform 0.3s ease
+        &:hover
+            transform: scale(1.1)
+
+        i
+            font-size: 1.8em
+
+        p
+            display: none
+                  
+                
+.source-link
+    font-size: 0.5em
+    color: blue
+    text-decoration: underline
+    margin: 0        
+
+
+#PinkMike
+    color: #EE024A
+    text-align: center
+
+#Converse
+    text-align: center
+ 
+
+img
+    max-width: 100%  // One part of ensuring responsive images. 
+    height: auto 
+
+#mainContentFrontPage
+    display: flex
+    flex-direction: column
+    padding: 20px
+    align-items: center
+
+    div 
+        text-align: center
+        margin-bottom: 30px
+
+
+//Creating a mixin to use for button styling:
+
+@mixin SeeMoreButton
+    background-color: #FFFFFF
+    padding: 10px 20px 
+    text-align: center
+    font-size: 1em
+    border: 2px solid black 
+    border-radius: 5px
+    margin-bottom: 15px
+    transition: all 0.3s ease
+
+    &:hover
+        background-color: darken(#E0E0E0, 10%) // & refers to the parent selector when nesting. 
+
+     
+.seeMoreButton
+    @include SeeMoreButton
+
+footer
+    grid-area: footer
+    display: flex
+    justify-content: space-around // Items are evenly spaced out on the line, equal space surrounding. 
+    // NB! Space around might not have support in Edge. Chrome might also lack support for some. 
+    border-top: 1px solid #D9D9D9
+    padding-bottom: 10px
+    position: fixed
+    bottom: 0
+    width: 100%
+    background-color: white
+
+    a
+        text-align: center
+        color: black
+        text-decoration: none
+        transition: transform 0.3s ease
+
+        &:hover
+            p
+                text-decoration: underline
+    
+        i
+            font-size: 1.5em
+            
+        &:hover
+            transform: scale(1.15) // Magnify on hover for accessibility compliance. 
+
+
+@media screen and (min-width: 800px) 
+    #gridContainer 
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: auto auto auto
+        grid-template-areas: "header nav nav" "main main main" "footer footer footer" //<<<- New syntax in SASS. 
+      
+    header 
+        justify-content: flex-start
+        column-gap: 20px 
+
+    nav
+        grid-area: nav
+
+    #mobileNavSection 
+        display: none
+    
+    #desktopNav
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        a
+            color: black
+            text-decoration: underline
+
+        #searchInput
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 20%
+            border: 1px solid black
+            border-radius: 5px
+            padding: 5px
+
+            p 
+                margin: 0
+                color: grey
+
+    #mainContentFrontPage
+        flex-direction: row
+
+        #Converse
+            margin-top: 75px
+
+    .link-box-wrapper
+        a
+            p
+                display: block
+
+    .product-grid
+        article
+            max-width: 30%
+
+
+    footer
+        display: none
+
+        
+        
+
+
+
+    
+
+    

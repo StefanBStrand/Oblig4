@@ -1,0 +1,341 @@
+/* Quick guide to remember Sass syntax and not mix with SCSS: 
+ *
+ *  1. No curly braces or semicolons are used.
+ *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
+ *  */
+#gridContainer {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer";
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+}
+header section {
+  display: flex;
+  align-items: center;
+}
+header h1 a {
+  display: inline-block;
+  color: #0029FF;
+  transition: transform 0.3s ease;
+}
+header h1 a:hover {
+  color: #001999;
+  transform: scale(1.15);
+}
+header .topNavIcons, header .headerIcon {
+  text-decoration: none;
+  color: black;
+  margin: 3px;
+}
+header .topNavIcons {
+  font-size: 1.5em;
+}
+header .headerIcon i {
+  transition: transform 0.3s ease;
+}
+header .headerIcon:hover i {
+  transform: scale(1.25);
+}
+
+#desktopNav {
+  display: none;
+}
+
+#shippingInfo {
+  text-align: center;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  padding: 1px;
+}
+
+main {
+  grid-area: main;
+  flex: 1;
+  padding: 5px;
+  padding-bottom: 80px;
+}
+main #productLogos {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+main #productLogos img {
+  max-height: 100px;
+}
+main #productLogos div {
+  flex: 1;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin: 10px;
+}
+main #productLogos div a:first-child {
+  color: black;
+  display: block;
+}
+main #productLogos div h2 {
+  transition: transform 0.3s ease;
+}
+main #productLogos div h2:hover {
+  transform: scale(1.15);
+  text-decoration: underline;
+}
+main #product-page-banner {
+  background-color: #d4d2d2;
+  border-radius: 8px;
+  margin: 10px;
+}
+main #product-page-banner #breadcrumb-nav {
+  color: grey;
+  padding: 3px 5px 0px 0px;
+  font-size: 0.9em;
+  margin: 0;
+}
+main #product-page-banner #breadcrumb-nav li {
+  display: inline;
+}
+main #product-page-banner #breadcrumb-nav li a {
+  text-decoration: underline;
+  color: grey;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+main #product-page-banner #breadcrumb-nav li a:hover {
+  transform: scale(1.1);
+}
+main #product-page-banner #search-result-info {
+  color: black;
+  display: block;
+  margin: 10px;
+}
+main #product-page-banner #search-result-info h1 {
+  font-size: 1.25em;
+  margin: 0;
+}
+main #product-page-banner #brands ul {
+  color: grey;
+  font-weight: lighter;
+}
+main #product-page-banner #brands ul li:nth-child(n+2) a {
+  color: black;
+  text-decoration: underline;
+  padding: 2px;
+  font-weight: bold;
+}
+main #product-page-banner #brands li {
+  display: inline;
+}
+main #product-page-banner aside {
+  text-align: right;
+  font-size: 0.9em;
+}
+main .product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+main .product-grid article {
+  width: 50%;
+}
+main .product-grid figure {
+  position: relative;
+  padding: 10px;
+}
+main .product-grid figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main .product-grid figure .product-item-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+  padding: 2px;
+  font-size: 0.9em;
+  z-index: 1;
+}
+
+.help-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+}
+.help-center .seeMoreButton {
+  padding: 5px;
+  font-size: 0.9em;
+  margin-top: 16px;
+}
+
+.link-box-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+.link-box-wrapper a {
+  font-size: 0.8em;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px;
+  width: 33%;
+  margin: 5px;
+  color: black;
+  transition: transform 0.3s ease;
+}
+.link-box-wrapper a:hover {
+  transform: scale(1.1);
+}
+.link-box-wrapper a i {
+  font-size: 1.8em;
+}
+.link-box-wrapper a p {
+  display: none;
+}
+
+.source-link {
+  font-size: 0.5em;
+  color: blue;
+  text-decoration: underline;
+  margin: 0;
+}
+
+#PinkMike {
+  color: #EE024A;
+  text-align: center;
+}
+
+#Converse {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#mainContentFrontPage {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+#mainContentFrontPage div {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.seeMoreButton {
+  background-color: #FFFFFF;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1em;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+.seeMoreButton:hover {
+  background-color: #c7c7c7;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #D9D9D9;
+  padding-bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+footer a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+footer a:hover p {
+  text-decoration: underline;
+}
+footer a i {
+  font-size: 1.5em;
+}
+footer a:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 800px) {
+  #gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header nav nav" "main main main" "footer footer footer";
+  }
+  header {
+    justify-content: flex-start;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  nav {
+    grid-area: nav;
+  }
+  #mobileNavSection {
+    display: none;
+  }
+  #desktopNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #desktopNav a {
+    color: black;
+    text-decoration: underline;
+  }
+  #desktopNav #searchInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  #desktopNav #searchInput p {
+    margin: 0;
+    color: grey;
+  }
+  #mainContentFrontPage {
+    flex-direction: row;
+  }
+  #mainContentFrontPage #Converse {
+    margin-top: 75px;
+  }
+  .link-box-wrapper a p {
+    display: block;
+  }
+  .product-grid article {
+    max-width: 30%;
+  }
+  footer {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
