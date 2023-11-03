@@ -8,6 +8,10 @@
   color: #0029FF;
 }
 
+.google-trend {
+  width: 100%;
+}
+
 #gridContainer {
   font-family: "Roboto", sans-serif;
   display: grid;
