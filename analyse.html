@@ -3,7 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Importing Roboto font here-->
+    <title>SnEEkZ</title>
+    <script
+      src="https://kit.fontawesome.com/684fb3ed8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--We can use the following tags: <header>, <nav>, <main>, <section>, <article> and <footer>-->
+    <!--We also get an allowance of 5 <div> tags per page. No MORE!-->
   </head>
-  <body></body>
+  <body id="gridContainer">
+    <header>
+      <section class="topNavIcons">
+        <a class="headerIcon" href="index.html" aria-label="Home Page button">
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a class="headerIcon" href="#" aria-label="Shopping cart button">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+        <a
+          class="headerIcon"
+          href="customerService.html"
+          aria-label="My account button"
+        >
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <a class="headerIcon" href="analyse.html" aria-label="Analyze page">
+          <i class="fa-sharp fa-solid fa-chart-simple"></i>
+        </a>
+      </section>
+
+      <h1>
+        <a href="index.html">SnEEKz</a>
+      </h1>
+
+      <section id="mobileNavSection">
+        <a class="headerIcon" href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <nav class="topNavIcons">
+          <a class="headerIcon" href="#">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </nav>
+      </section>
+    </header>
+
+    <nav id="desktopNav">
+      <a href="analyse.html">Analyse</a>
+      <a href="#">News</a>
+      <a href="#">Brands</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Customer Service</a>
+
+      <section id="searchInput">
+        <p>Search</p>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </section>
+    </nav>
+
+    <main>
+      <h2 id="analyse">Analyse</h2>
+      <p class="keywords"></p>
+    </main>
+    <footer></footer>
+  </body>
 </html>

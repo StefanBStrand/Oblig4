@@ -3,6 +3,11 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+#analyse {
+  text-align: center;
+  color: #0029FF;
+}
+
 #gridContainer {
   font-family: "Roboto", sans-serif;
   display: grid;
