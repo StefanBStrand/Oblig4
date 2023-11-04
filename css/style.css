@@ -10,6 +10,11 @@
 
 .google-trend {
   width: 100%;
+  max-height: 450px;
+}
+
+#SEO img {
+  width: 100%;
 }
 
 #gridContainer {
