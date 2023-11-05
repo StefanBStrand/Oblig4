@@ -380,11 +380,85 @@
           </thead>
           <tbody>
             <tr>
-              <td>Data 1A</td>
-              <td>Data 2A</td>
-              <td>Data 3A</td>
+              <td>
+                GPT-feedback on both SEO and UU:
+                <ul>
+                  <li>GPT also comments on the lacking meta description.</li>
+                  <li>
+                    Makes a remark that the title in index.html is present and
+                    good for SEO, however could be more descriptive of the page
+                    content.
+                  </li>
+                  <li>
+                    Remarks on missing alt attributes. Important for image
+                    search optimization.
+                  </li>
+                  <li>
+                    Points out that the title being "Dodument" for product.html
+                    and customerService.html is not descriptive. Not good for
+                    SEO.
+                  </li>
+                  <li>
+                    Regarding UU: Points out that some images have empty alt
+                    attributes.
+                  </li>
+                  <li>
+                    Aria-label appropriately used in some links, for assisitve
+                    tech.
+                  </li>
+                  <li>
+                    Says that page does not contain a "main" landmark until
+                    halfway through the document. Could possibly confuse
+                    navigation for screen reader users.
+                  </li>
+                  <li>
+                    Remarks on the aside tag being used in product.html without
+                    an accessible name. This makes it unclear what the content
+                    represents for screen readers.
+                  </li>
+                  <li>
+                    Remarks that some interactive elements lack accessible
+                    names, like filter button. Can be problematic for screen
+                    readers.
+                  </li>
+                  <li>
+                    Comments on contrast ration being low for some elements.
+                  </li>
+                  <li>Comments on missing skip link.</li>
+                  <li>
+                    Comments on dependancy on FontAwesome Icons, which can be
+                    problematic if the FontAwesome script should fail to load.
+                    Provide text alternatives.
+                  </li>
+                  <li>
+                    Document declares language set as english, but should make
+                    sure that any text not being in english is appropriately
+                    marked with correct language attribute
+                  </li>
+                </ul>
+              </td>
+              <td>
+                Lightouse feedback on SEO:
+                <ul>
+                  <li>
+                    Lighthouse only makes one remark for all pages. That being
+                    that they all lack a meta description
+                  </li>
+                </ul>
+              </td>
+              <td>
+                WAVE feedback on accessibility:
+                <ul>
+                  <li>Remarks on low contrast ratio for some elements.</li>
+                  <li>Remarks about empty links</li>
+                  <li>
+                    Alerts about underlined text in Limited Edition label on
+                    product page. Might be confusing as it usually implies a
+                    link, which it technically is not.
+                  </li>
+                </ul>
+              </td>
             </tr>
-            <!-- Add more rows as needed -->
           </tbody>
         </table>
       </section>
