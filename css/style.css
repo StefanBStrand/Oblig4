@@ -3,6 +3,23 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+#table-comparison {
+  padding: 10px;
+}
+
+#table1 {
+  width: 100%;
+  border-collapse: collapse;
+}
+#table1 thead {
+  background-color: #f0f0f0;
+}
+#table1 td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
 #analyse {
   text-align: center;
   color: #0029FF;
