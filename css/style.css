@@ -3,6 +3,19 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus-visible {
+  top: 0;
+}
+
 #table-comparison {
   padding: 10px;
 }
