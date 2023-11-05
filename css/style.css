@@ -156,7 +156,7 @@ main #product-page-banner #breadcrumb-nav li {
 }
 main #product-page-banner #breadcrumb-nav li a {
   text-decoration: underline;
-  color: grey;
+  color: black;
   display: inline-block;
   transition: transform 0.3s ease;
 }
@@ -173,7 +173,7 @@ main #product-page-banner #search-result-info h1 {
   margin: 0;
 }
 main #product-page-banner #brands ul {
-  color: grey;
+  color: black;
   font-weight: lighter;
 }
 main #product-page-banner #brands ul li:nth-child(n+2) a {
@@ -367,7 +367,7 @@ footer a:hover {
   }
   #desktopNav #searchInput p {
     margin: 0;
-    color: grey;
+    color: black;
   }
   #mainContentFrontPage {
     flex-direction: row;

@@ -164,7 +164,7 @@ main
         background-color: #d4d2d2
         border-radius: 8px
         margin: 10px
-  
+        
 
         #breadcrumb-nav
             color: grey
@@ -178,7 +178,7 @@ main
                 
                 a
                     text-decoration: underline
-                    color: grey
+                    color: black  // black color to fix contrast ratio error.
                     display: inline-block
                     transition: transform 0.3s ease
                     &:hover
@@ -197,7 +197,7 @@ main
         #brands
 
             ul
-                color: grey
+                color: black // fix contrast ratio error with black font. 
                 font-weight: lighter
 
                 li:nth-child(n+2)
@@ -398,7 +398,7 @@ footer
 
             p 
                 margin: 0
-                color: grey
+                color: black  // Black color fixes low contrast ratio as opposed to using grey. 
 
     #mainContentFrontPage
         flex-direction: row
