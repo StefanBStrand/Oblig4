@@ -178,8 +178,192 @@
         </p>
       </section>
 
-      <section id="GPTreview">
-        <h3>SEO and UU analysis of pages using CHatGPT</h3>
+      <section id="GPTreviewSEO">
+        <h3>SEO and UU analysis of pages using ChatGPT</h3>
+        <h4>Feedback on all three pages from chatGPT regarding SEO:</h4>
+        <h5>Index.html</h5>
+        <ul>
+          <li>
+            Title "SnEEkZ" is present, which is good for SEO, but it could be
+            more descriptive of the page content.
+          </li>
+          <li>
+            No meta description tag is found which is important for SEO as it
+            describes the page content in search results.
+          </li>
+          <li>
+            Headings are used (<code>&lt;h1&gt;</code>,
+            <code>&lt;h2&gt;</code>), which is good for SEO structure.
+          </li>
+          <li>
+            Images have missing alt attributes, which are important for image
+            search optimization.
+          </li>
+        </ul>
+
+        <h5>product.html</h5>
+        <ul>
+          <li>
+            The title tag "Document" is not descriptive and not helpful for SEO.
+          </li>
+          <li>
+            No meta description tag is present, missing an opportunity for page
+            summarization in search results.
+          </li>
+          <li>
+            Breadcrumb navigation is good for SEO, providing a clear page
+            hierarchy.
+          </li>
+          <li>
+            <code>&lt;h1&gt;</code> tag is used appropriately, aiding in page
+            structure understanding for search engines.
+          </li>
+        </ul>
+
+        <h5>customerService.html</h5>
+        <ul>
+          <li>
+            Title Tag: The <code>&lt;title&gt;</code> tag currently says
+            "Document", which is not descriptive and does not contain any
+            keywords related to the business or content of the website. For SEO
+            purposes, this should be a concise and accurate description of the
+            page's content, ideally including relevant keywords.
+          </li>
+          <li>
+            Meta Description: There is no meta description tag present in the
+            head of the document. A meta description provides a summary of the
+            page content that search engines can display in search results. It
+            should include relevant keywords and a compelling description to
+            encourage click-through.
+          </li>
+          <li>
+            Heading Structure: The use of headings (<code>h1</code>,
+            <code>h2</code>, etc.) seems to be semantically correct, but it's
+            essential to ensure that they include relevant keywords for SEO.
+          </li>
+          <li>
+            Alt Text for Images: Icons used in the document (such as those from
+            FontAwesome) do not have alternative text which would describe the
+            image or its function. Although these icons might be decorative, if
+            they convey meaning or action (like the home icon or cart icon),
+            they should have corresponding alt text.
+          </li>
+          <li>
+            Content Quality: Since there is very little text content and it’s
+            mostly template-like, it doesn’t offer much for search engines to
+            index. Rich, keyword-optimized, relevant content is crucial for good
+            SEO.
+          </li>
+          <li>
+            Link Anchor Text: The links in the document are either icons or
+            generic terms like "See More >". More descriptive link text could
+            help SEO by providing search engines with more context about the
+            linked content.
+          </li>
+        </ul>
+      </section>
+
+      <section id="GPTreviewUU">
+        <h4>Feedback on all three pages from chatGPT regarding UU:</h4>
+        <h5>index.html</h5>
+        <ul>
+          <li>
+            Some images have empty alt attributes, which is not helpful for
+            screen readers.
+          </li>
+          <li>
+            The page uses aria-label appropriately in some links for assistive
+            technologies.
+          </li>
+          <li>
+            Semantic HTML5 elements such as &lt;header&gt;, &lt;nav&gt;,
+            &lt;main&gt;, &lt;section&gt;, and &lt;footer&gt; are used properly,
+            enhancing accessibility.
+          </li>
+          <li>
+            The page does not contain a &lt;main&gt; landmark until halfway
+            through the document, which could confuse navigation for screen
+            reader users.
+          </li>
+          <li>
+            There are potentially more than five &lt;div&gt; elements as
+            specified in the comment, which may not meet the given instructions.
+          </li>
+        </ul>
+        <h5>product.html</h5>
+        <ul>
+          <li>
+            Breadcrumb navigation has an aria-label, which is good for screen
+            reader users.
+          </li>
+          <li>
+            &lt;aside&gt; tag is used without an accessible name, making it
+            unclear what the content represents for screen reader users.
+          </li>
+          <li>
+            Some interactive elements lack accessible names, like the filter
+            button, which can be problematic for screen reader users.
+          </li>
+          <li>
+            Text inside the &lt;p&gt; element within the &lt;div
+            id="searchInput"&gt; is not explicitly associated with the search
+            functionality.
+          </li>
+        </ul>
+        <h5>customerService.html</h5>
+        <ul>
+          <li>
+            Contrast Ratio: Without seeing the CSS, it’s impossible to evaluate
+            the contrast ratio of the text to the background. High contrast is
+            required for readability for users with visual impairments.
+          </li>
+          <li>
+            Accessible Navigation: It appears that there is a separate
+            navigation section for mobile and desktop (id="mobileNavSection" and
+            id="desktopNav"). It is important to ensure that both are fully
+            keyboard navigable and that they work with screen readers without
+            duplicative content that could confuse users.
+          </li>
+          <li>
+            ARIA Labels: The use of ARIA attributes like aria-label on the
+            analyze page link is good for conveying the purpose of the link to
+            screen reader users. However, other icon links may also require ARIA
+            labels if the icons have a function or convey a specific meaning.
+          </li>
+          <li>
+            Interactive Element Accessibility: Interactive elements such as
+            links and buttons should be accessible with keyboard navigation and
+            provide focus styles to assist users who are not using a mouse.
+          </li>
+          <li>
+            Semantic HTML: Use of semantic HTML elements helps screen readers
+            and assistive technologies understand the structure and content of
+            the webpage. It's important to ensure that sections and other
+            elements are used appropriately for their intended purpose.
+          </li>
+          <li>
+            Skip Links: There are no skip links, which are helpful for
+            keyboard-only users to bypass repetitive navigation links and
+            quickly access main content.
+          </li>
+          <li>
+            Language and Readability: Content should be clear and easily
+            understandable. For example, abbreviations like "$" should be
+            explained or supplemented with text for users who may not understand
+            the symbol.
+          </li>
+          <li>
+            Icon Font Fallback: There is a dependency on FontAwesome for icons.
+            If the FontAwesome script fails to load or is blocked, users may not
+            see the icons, potentially reducing the usability of the site. Text
+            alternatives or fallbacks are necessary.
+          </li>
+          <li>
+            Document Language: The document declares lang="en" which is good for
+            accessibility, but ensure that any text not in English is
+            appropriately marked with its language attribute.
+          </li>
+        </ul>
       </section>
     </main>
     <footer></footer>
