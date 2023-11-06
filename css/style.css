@@ -3,6 +3,13 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+#post-improvements img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 450px;
+  padding: 10px;
+}
+
 .skip-link {
   position: absolute;
   top: -40px;
