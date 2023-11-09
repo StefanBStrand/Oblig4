@@ -3,6 +3,13 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+#accessibility img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 800px;
+  padding: 10px;
+}
+
 #post-improvements img {
   width: 100%;
   max-width: 500px;
@@ -53,6 +60,11 @@
 }
 
 #part3 {
+  text-align: center;
+  color: #0029FF;
+}
+
+#part4 {
   text-align: center;
   color: #0029FF;
 }
