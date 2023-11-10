@@ -133,25 +133,39 @@
               itemscope
               itemtype="https://schema.org/Offer"
             >
-              <meta itemprop="priceCurrency" content="USD" />
-              <!--meta tags allowed in body of HTML doc when using it for microdata-->
-              <p itemprop="price">169</p>
+              <span itemprop="priceCurrency">USD</span>
+              <p class="price" itemprop="price">169</p>
             </div>
             <p>Men's | Shoes | Street</p>
           </figure>
         </article>
 
-        <article class="product-item">
+        <article
+          class="product-item"
+          itemscope
+          itemtype="https://schema.org/Product"
+        >
           <figure>
-            <img src="img/WhiteAdidas.jpg" alt="White Adidas shoe" />
+            <img
+              src="img/WhiteAdidas.jpg"
+              alt="White Adidas shoe"
+              itemprop="image"
+            />
             <a
               href="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f4960ba177b7467791c2acb600279e47_9366/forum-mid-shoes.jpg"
               target="_blank"
               class="source-link"
               >Link to img source</a
             >
-            <h2>ADIBAS HIGH MOON LANDER WB</h2>
-            <p>145 $</p>
+            <h2 itemprop="name">ADIBAS HIGH MOON LANDER WB</h2>
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <span itemprop="priceCurrency">USD</span>
+              <p class="price" itemprop="price">145</p>
+            </div>
             <p>Men's | Shoes | Street</p>
           </figure>
         </article>
