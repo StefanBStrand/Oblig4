@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoe product page</title>
+    <title>SnEEKz product page</title>
     <meta
       name="description"
       content="The latest and hottest sneakers you can find. SnEEKZ is your go to place for the latest styles"
@@ -112,7 +112,7 @@
           itemscope
           itemtype="https://schema.org/Product"
         >
-          <!--Adding the itemtype here from schema.org-->
+          <!--Adding the itemtype here from schema.org. This declares that all the children of the article tag are related to a product as well.-->
           <figure>
             <img
               src="img/nikeRed.jpg"
@@ -127,7 +127,16 @@
             >
             <span class="product-item-label">LIMITED EDITION</span>
             <h2 itemprop="name">MIKE RED SKATER O8S</h2>
-            <p itemscope itemtype="http://schema.org/Offer">169 $</p>
+            <!--Wrapping price-info inside div tag to add itemscope and type. Allows to add itemprop price to p tag. I cannot give a tag an "itemprop" if the tag is not part of a larger structure (itemscope and itemtype) that defines what the price is related to.-->
+            <div
+              itemprop="offers"
+              itemscope
+              itemtype="https://schema.org/Offer"
+            >
+              <meta itemprop="priceCurrency" content="USD" />
+              <!--meta tags allowed in body of HTML doc when using it for microdata-->
+              <p itemprop="price">169</p>
+            </div>
             <p>Men's | Shoes | Street</p>
           </figure>
         </article>
