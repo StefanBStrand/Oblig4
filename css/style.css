@@ -7,6 +7,13 @@
   display: inline;
 }
 
+#micro-data img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 800px;
+  padding: 10px;
+}
+
 #accessibility img {
   width: 100%;
   max-width: 500px;
