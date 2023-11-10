@@ -107,9 +107,18 @@
       </section>
 
       <section class="product-grid">
-        <article class="product-item">
+        <article
+          class="product-item"
+          itemscope
+          itemtype="https://schema.org/Product"
+        >
+          <!--Adding the itemtype here from schema.org-->
           <figure>
-            <img src="img/nikeRed.jpg" alt="Red and white nike shoe" />
+            <img
+              src="img/nikeRed.jpg"
+              alt="Red and white nike shoe"
+              itemprop="image"
+            />
             <a
               href="https://www.goat.com/editorial/beginners-guide-to-nike-sneakers"
               target="_blank"
@@ -117,8 +126,8 @@
               >Link to img source</a
             >
             <span class="product-item-label">LIMITED EDITION</span>
-            <h2>MIKE RED SKATER O8S</h2>
-            <p>169 $</p>
+            <h2 itemprop="name">MIKE RED SKATER O8S</h2>
+            <p itemscope itemtype="http://schema.org/Offer">169 $</p>
             <p>Men's | Shoes | Street</p>
           </figure>
         </article>
