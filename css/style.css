@@ -3,6 +3,13 @@
  *  1. No curly braces or semicolons are used.
  *  2. Indentation is crucial and determines the nesting of selectors. (Somewhat like Python..)
  *  */
+#Meta-Some img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 400px;
+  padding: 10px;
+}
+
 .price {
   display: inline;
 }
